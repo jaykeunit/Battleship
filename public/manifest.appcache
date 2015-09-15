@@ -1,0 +1,22 @@
+CACHE MANIFEST
+#VERSION 2.2
+
+CACHE:
+index.html
+/images/BattleshipHeader.jpg
+/images/water.jpg
+/images/waterDoubleMiss.jpg
+/images/waterMiss.jpg
+/images/waterOneEnemyShip.jpg
+/images/waterOneShip.jpg
+/images/waterOneShipHitMiss.jpg
+/images/waterOneShipMIss.jpg
+/images/waterOneShipSunk.jpg
+/images/waterOppMiss.jpg
+/images/waterTwoShipsOneSunk.jpg
+/images/waterTwoShipsSunk.jpg
+
+FALLBACK:
+
+NETWORK:
+*

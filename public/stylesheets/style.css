@@ -1,0 +1,66 @@
+html {
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: white;
+    height: 100%;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px;
+    padding: 0;
+}
+
+label#username {
+    font-size: 40px;
+    padding-left: 160px;
+    text-align: center;
+    padding-right: 160px;
+}
+
+a {
+  color: #00B7FF;
+}
+.main{
+    padding-left: 160px;
+    padding-top: 40px;
+}
+
+input#map {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+input#map:hover {
+  border-color: blue;
+}
+
+input#map::-webkit-input-placeholder{
+  color:black;
+  opacity:  1;
+}
+input#map:-moz-placeholder{
+  color: black;
+  opacity:  1;
+}
+
+footer{
+    padding-left: 95px;
+    padding-right: 95px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+section#wonlostmsg{
+  padding-left: 30px;
+}

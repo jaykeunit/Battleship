@@ -1,0 +1,30 @@
+<!doctype html>
+    <html ng-app="battleshipApp" >
+        <head>
+            <link rel= "stylesheet" href= "./stylesheets/PlayersLobbystyle.css" type= " text/css"/>
+			<link rel= "stylesheet" href= "./stylesheets/style.css" type= " text/css"/>
+        </head>
+		<img id="header" src= "images/BattleshipHeader.jpg"></img>
+        <body ng-controller="PlayersLobbyController as playersLobbyController">
+			<label id="username" ng-bind = "playersLobbyController.loggedInUser"></label>
+            <form id="playerList">
+                <label>Players Available:</label>
+                <table>
+                    <tr>
+                        <th>Player Name</th>
+                    </tr>
+                    <tbody>
+                        <tr ng-repeat = "user in playersLobbyController.returnList()">
+                            <td>{{user.username}}<input type="button" value="invite" ng-click="playersLobbyController.invitePlayer(user)"></inupt></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label ng-bind = "playersLobbyController.lobbyError"></label>
+            </form>
+        </body>
+        <footer ><p>&copy; Created by: Nestor Gonzalez &  Jake Martinez 2015 All rights reserved.</p></footer>
+        <script src="javascripts/angular/angular.js"></script>
+		<script src="javascripts/loginController.js"></script>
+		<script src="javascripts/playersLobbyController.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </html>

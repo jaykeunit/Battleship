@@ -1,0 +1,37 @@
+<!doctype html>
+    <html ng-app="battleshipApp" >
+        <head>
+            <link rel= "stylesheet" href= "./stylesheets/style.css" type= " text/css"/>
+			<link rel= "stylesheet" href= "./stylesheets/gameBattlecss.css" type= " text/css"/>
+        </head>
+		<img src= "images/BattleshipHeader.jpg"></img>
+        <body ng-controller="BattleController as battleController" >
+			<section id= "game">
+				<section id = "messages">
+					<label ng-bind = "battleController.battleError"></label>
+					<label ng-bind = "battleController.gameMessage"></label>
+				</section>
+				<table id = "gameboard" ng-repeat="row in rows" class="row">
+					<tr class="list">
+						<td class="item item-checkbox"  ng-repeat="item in row">
+							<label class="checkbox">
+								<input id= "map" readonly ng-click= "battleController.makeMove(item.val)" ng-model="item.checked" placeholder= "{{item.val}}" ng-style='item.background'></input>
+							</label>
+						</td>
+					</tr>
+				</table>
+				<pre ng-bind= "battleController.generateMap()"></pre>
+				<section>
+					<label ng-bind= "battleController.myShipLabel"></label>
+				</section>
+				<section id= "readyButton">
+					<input type="button" value="Ready"  ng-click="battleController.shipsReady()" ></inupt>
+				</section>
+			</section>
+		</body>
+        <footer ><p>&copy; Created by: Nestor Gonzalez & Jake Martinez 2015 All rights reserved.</p></footer>
+        <script src="javascripts/angular/angular.js"></script>
+		<script src="javascripts/loginController.js"></script>
+		<script src="javascripts/battleController.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    </html>

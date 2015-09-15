@@ -1,0 +1,21 @@
+<!doctype html>
+    <html ng-app="battleshipApp">
+        <head>
+            <link rel= "stylesheet" href= "./stylesheets/style.css" type= " text/css"/>
+			<link rel= "stylesheet" href= "./stylesheets/invitecss.css" type= " text/css"/>
+        </head>
+		<img src= "images/BattleshipHeader.jpg"></img>
+        <body ng-controller="InviteController as inviteController">
+			<h2><label id="username" ng-bind = "inviteController.loggedInUser"></label></h2>
+            <form id="accept">
+                <label ng-bind = "inviteController.InvitedMsg"></label>
+				<input type="button" value="Accept Invite" ng-show = "inviteController.showButton()" ng-click="inviteController.acceptClick()" ></inupt>
+				<input type="button" value="Decline Invite" ng-show = "inviteController.showButton()" ng-click="inviteController.declineClick()" ></inupt>
+                <label ng-bind = "inviteController.accpetError"></label>
+            </form>
+        </body>
+        <footer class="main"><p>&copy; Created by: Nestor Gonzalez &  Jake Martinez 2015 All rights reserved.</p></footer>
+        <script src="javascripts/angular/angular.js"></script>
+		<script src="javascripts/loginController.js"></script>
+		<script src="javascripts/inviteController.js"></script>
+    </html>

@@ -1,0 +1,21 @@
+<!doctype html>
+    <html ng-app="battleshipApp" manifest = "manifest.appcache">
+        <head>
+            <link rel= "stylesheet" href= "./stylesheets/style.css" type= " text/css"/>
+        </head>
+		<img src= "images/BattleshipHeader.jpg"></img>
+        <body ng-controller="LoginController as loginController">
+			<form class="main" ng-submit= "loginController.login()">
+				<section id = "wonlostmsg">
+					<header><h2><b>You WON! Log in to play again.</b></h2></header>
+				</section>
+                <label>Enter Username:</label>
+                <input id= "Username" type= "input" name= "Username" placeholder= "Username"  ng-model="loginController.username" autofocus=true required tabindex= 1></input>
+                <button type= "submit" tabindex= 2>Submit</button>
+                <label ng-bind="loginController.loginError"></label>
+            </form>
+        </body>
+        <footer id="footer"><p>&copy; Created by: Nestor Gonzalez &  Jake Martinez 2015 All rights reserved.</p></footer>
+        <script src="javascripts/angular/angular.js"></script>
+		<script src="javascripts/loginController.js"></script>
+    </html>
